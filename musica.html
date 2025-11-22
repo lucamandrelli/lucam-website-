@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Musica – Album</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">LM</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="#albums">Album</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- NIENTE HERO, SI PARTE DIRETTAMENTE DAGLI ALBUM -->
+    <section id="albums" class="section">
+      <div class="container">
+        <h1>Album</h1>
+
+        <!-- FILTRO GENERE -->
+        <div class="album-filters">
+          <label for="genreFilter">Filtra per genere:</label>
+          <select id="genreFilter">
+            <option value="all">Tutti i generi</option>
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="jazz">Jazz</option>
+            <option value="pop">Pop</option>
+            <option value="folk">Folk</option>
+          </select>
+        </div>
+
+        <div class="album-list">
+
+          <!-- ALBUM 1 – Kind of Blue -->
+          <article class="album-card"
+                   data-genre="jazz"
+                   data-subgenre="modal-jazz">
+            <div class="album-cover">
+              <img src="img/kind_of_blue.jpg" alt="Copertina Kind of Blue">
+            </div>
+
+            <div class="album-info">
+              <!-- Titolo + artista/anno sulla stessa riga -->
+              <div class="album-header">
+                <h3>Kind of Blue</h3>
+                <span class="album-header-meta">
+                  Artista: Miles Davis - Anno: 1959
+                </span>
+              </div>
+
+              <!-- Riga 2: Genere + Sottogenere -->
+              <div class="album-meta-row album-meta-bottom">
+                <span>Genere:</span>
+                <span class="tag tag-genre tag-jazz">Jazz</span>
+                <span>Sottogenere:</span>
+                <span class="tag tag-subgenre tag-modal-jazz">Modal Jazz</span>
+              </div>
+
+              <!-- Footer: Mood + bottone a destra -->
+              <div class="album-footer">
+                <div class="album-mood">
+                  Mood:
+                  <span class="mood-pill mood-rilassato">Rilassato</span>
+                </div>
+
+                <button class="album-notes-btn"
+                        onclick="window.location.href='note_kind_of_blue.html'">
+                  Apri note album
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Qui puoi aggiungere altri album copiando il blocco <article> e cambiando i dati -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Il mio spazio online</p>
+    </div>
+  </footer>
+
+  <script>
+    // anno nel footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // filtro per genere
+    const genreSelect = document.getElementById("genreFilter");
+    const albumCards = document.querySelectorAll(".album-card");
+
+    genreSelect.addEventListener("change", function () {
+      const selected = this.value; // 'rock', 'metal', 'jazz', 'all', ecc.
+
+      albumCards.forEach(card => {
+        const genre = card.dataset.genre;
+        if (selected === "all" || genre === selected) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Note – Kind of Blue </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">LM</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="musica.html">Torna agli album</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Kind Of Blue – Note</h2>
+        <p>
+          Qui puoi scrivere le tue note personali: perché ti piace questo album,
+          quali brani preferisci, che emozioni ti dà, eventuali curiosità tecniche, ecc.
+        </p>
+
+        <p>
+          Puoi usare anche dei <br> a capo
+          per formattare i pensieri come vuoi.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Il mio spazio online</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

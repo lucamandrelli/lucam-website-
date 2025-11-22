@@ -1,0 +1,485 @@
+:root {
+  --bg: #0f172a;
+  --bg-alt: #020617;
+  --card-bg: #020617;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.1);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-subtle: #1f2937;
+  --radius-lg: 1.25rem;
+  --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1d283a 0, #020617 50%, #020617 100%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Layout base */
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  padding: 4rem 0;
+  background: radial-gradient(circle at top left, #1e293b 0, #020617 55%);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), transparent);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top left, #38bdf8, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1120;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 0 0 1px rgba(8, 47, 73, 0.8), var(--shadow-soft);
+}
+
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.18s ease-out;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  border-color: rgba(56, 189, 248, 0.4);
+  background-color: rgba(15, 23, 42, 0.85);
+}
+
+/* Hero */
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at top left, #38bdf8, #0ea5e9);
+  color: #0b1120;
+  font-weight: 600;
+  border: none;
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 45px rgba(8, 47, 73, 0.75);
+}
+
+/* Sezioni */
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.section p {
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+/* Dimensione testo sezione "Chi sono" */
+#about p {
+  font-size: 0.9rem;
+}
+
+/* Cards (contenuti) */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.card-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.card-link::after {
+  content: "→";
+  margin-left: 0.35rem;
+}
+
+/* Social */
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.social-list a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background-color: rgba(15, 23, 42, 0.9);
+  transition: all 0.16s ease-out;
+}
+
+.social-list a:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.5rem 0 1.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .header-inner {
+    padding-inline: 0;
+  }
+
+  .nav a {
+    margin-left: 0.4rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .section,
+  .section-alt {
+    padding: 3rem 0;
+  }
+}
+
+/* === Album list / Musica === */
+
+.album-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.album-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.5);
+}
+
+.album-cover {
+  flex-shrink: 0;
+  width: 100px;           /* prova 70–90px finché ti piace */
+  aspect-ratio: 1 / 1;   /* sempre quadrata */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* riempie il quadrato senza deformarsi */
+}
+
+/* Colonna destra con le info */
+.album-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;         /* si allarga e permette al bottone di stare tutto a destra */
+}
+
+/* Riga 1: titolo + artista/anno */
+.album-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.album-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.album-header-meta {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Riga 2: genere + sottogenere */
+.album-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Footer: mood a sinistra, bottone a destra */
+.album-footer {
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.album-mood {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.mood-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 0.3rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: rgba(15, 23, 42, 0.9);
+}
+
+/* Varianti di colore per i mood */
+.mood-energico {
+  border-color: #f97316;
+}
+
+.mood-riflessivo {
+  border-color: #22c55e;
+}
+
+.mood-rilassato {
+  border-color: #38bdf8;
+}
+
+/* Bottone note album: spinto tutto a destra */
+.album-notes-btn {
+  margin-left: auto;            /* manda il bottone al bordo destro */
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  color:#ffffff;              /* testo bianco */
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.album-notes-btn:hover {
+  background: var(--accent-soft);
+}
+
+/* Filtro genere */
+
+.album-filters {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.album-filters select {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+/* Tag di genere / sottogenere */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background-color: rgba(15, 23, 42, 0.95);
+  font-size: 0.8rem;
+}
+
+.tag-genre {
+  font-weight: 600;
+}
+
+.tag-subgenre {
+  opacity: 0.9;
+}
+
+/* Genere pieno, sottogenere solo bordo (JAZZ) */
+.tag-genre.tag-jazz {
+  background-color: #38bdf8;
+  border-color: #38bdf8;
+  color: #0b1120;
+}
+
+.tag-subgenre.tag-modal-jazz {
+  border-color: #38bdf8;
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+/* Esempi per altri generi/sottogeneri, se li userai */
+.tag-genre.tag-rock {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: #0b1120;
+}
+
+.tag-subgenre.tag-progressive-rock {
+  border-color: #22c55e;
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.tag-genre.tag-metal {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #0b1120;
+}
+
+.tag-subgenre.tag-thrash-metal {
+  border-color: #f97316;
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+/* Mobile: card in colonna */
+@media (max-width: 600px) {
+  .album-card {
+    align-items: flex-start;
+  }
+
+  .album-cover {
+    width: 64px;
+    height: 64px;
+  }
+
+  .album-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .album-notes-btn {
+    margin-left: 0;
+  }
+}
+
