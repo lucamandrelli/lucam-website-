@@ -365,6 +365,11 @@ h2 {
   border-color: #38bdf8;
 }
 
+.mood-sperimentale {
+  border-color: #a855f7;  /* viola acceso */
+}
+
+
 /* Bottone note album: spinto tutto a destra */
 .album-notes-btn {
   margin-left: auto;            /* manda il bottone al bordo destro */
@@ -436,7 +441,6 @@ h2 {
   color: var(--text-main);
 }
 
-/* Esempi per altri generi/sottogeneri, se li userai */
 .tag-genre.tag-rock {
   background-color: #22c55e;
   border-color: #22c55e;
@@ -457,6 +461,18 @@ h2 {
 
 .tag-subgenre.tag-thrash-metal {
   border-color: #f97316;
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.tag-genre.tag-pop {
+  background-color: #ec4899;  /* rosa pop */
+  border-color: #ec4899;
+  color: #0b1120;             /* testo scuro per contrasto */
+}
+
+.tag-subgenre.tag-pop-rock {
+  border-color: #ec4899;      /* stesso colore del genere */
   background-color: transparent;
   color: var(--text-main);
 }
