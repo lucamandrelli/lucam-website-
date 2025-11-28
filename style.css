@@ -441,6 +441,12 @@ h2 {
   color: var(--text-main);
 }
 
+.tag-subgenre.tag-modal-swing {
+  border-color: #38bdf8;
+  background-color: transparent;
+  color: var(--text-main);
+}
+
 .tag-genre.tag-rock {
   background-color: #22c55e;
   border-color: #22c55e;
