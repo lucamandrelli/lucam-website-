@@ -8,6 +8,5 @@
 *.fdb_latexmk
 *.synctex.gz
 
-# File da conservare
-!*.tex
-!*.pdf
+# Impostazioni locali di VS Code
+.vscode/
