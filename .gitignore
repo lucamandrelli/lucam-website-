@@ -1,0 +1,13 @@
+# File temporanei LaTeX
+**/build/
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# File da conservare
+!*.tex
+!*.pdf

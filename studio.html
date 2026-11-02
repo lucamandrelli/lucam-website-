@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Studio – LM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Appunti ed elaborati di filosofia, scienza e tecnologia." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">LM</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#posts">Contenuti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Studio</h1>
+        <p>
+          Appunti ed elaborati su filosofia,
+          scienza e tecnologia.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Filosofia</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Ontologia, principi filosofici</h3>
+
+            <p>
+              Un'indagine sui concetti di essere,
+              ente, identità e relazione.
+            </p>
+
+            <p>
+              <small>2 novembre 2026 · In elaborazione</small>
+            </p>
+
+            <a href="research/ontologia/ontologia_filosofia.html"
+                class="card-link">
+                Leggi l'elaborato
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Il mio spazio online</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>

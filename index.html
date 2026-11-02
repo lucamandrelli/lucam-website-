@@ -1,16 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Il mio spazio online</title>
+  <title>Il mio spazio online – LM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Il mio spazio personale dove condivido contenuti e idee." />
+  <meta
+    name="description"
+    content="Uno spazio personale dedicato a musica, filosofia, scienza e tecnologia."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">LM</div>
+
       <nav class="nav">
         <a href="#about">Chi sono</a>
         <a href="#posts">Contenuti</a>
@@ -20,15 +28,19 @@
   </header>
 
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <h1>Ciao, questo è il mio spazio online</h1>
+          <h1>Il mio spazio online</h1>
           <p>
-            Qui raccolgo idee, progetti e contenuti da condividere.
+            Uno spazio in cui raccolgo interessi,
+            idee e approfondimenti.
           </p>
-          <a href="#posts" class="btn-primary">Vai ai contenuti</a>
+          <a href="#posts" class="btn-primary">
+            Esplora i contenuti
+          </a>
         </div>
       </div>
     </section>
@@ -37,49 +49,53 @@
     <section id="about" class="section">
       <div class="container">
         <h2>Chi sono</h2>
+
         <p>
-          Mi chiamo Luca Mandrelli, sono nato nel 1983.
-          Ingegnere meccanico, interessato allo studio e all'approfondimento di svariate
-          discipline tecniche e scientifiche.<br>
-          Appassionato di musica, di cui faccio consumo in quantità industriali, mantengo 
-          attiva la mente e il corpo, leggendo e praticando running all'aria aperta.<br>
-          Sono una persona curiosa, gentile e aperta al dialogo con chiunque
-          non voglia imporre il proprio punto di vista.
-          Penso che la verità delle cose stia all'interno di ciascuno di noi e che la vita
-          sia il percorso alla continua ricerca e riscoperta di questa verità. 
+          Mi chiamo Luca Mandrelli, sono nato nel 1983
+          e sono ingegnere meccanico.
+          Mi interessano la scienza, la filosofia
+          e la musica, discipline che esploro per
+          curiosità e desiderio di approfondimento.
+        </p>
+
+        <p>
+          In questo sito raccolgo appunti, riflessioni
+          e analisi su ciò che studio e ascolto.
         </p>
       </div>
     </section>
 
-    <!-- CONTENUTI / POST -->
+    <!-- CONTENUTI -->
     <section id="posts" class="section section-alt">
       <div class="container">
         <h2>Contenuti</h2>
 
         <div class="cards">
+
+          <!-- MUSICA -->
           <article class="card">
-            <h3>Sezione Musica</h3>
+            <h3>Musica</h3>
             <p>
-              I miei album
+              Album e artisti che hanno segnato
+              la musica contemporanea.
             </p>
-            <a href="musica.html" class="card-link">Scopri di più</a>
+            <a href="music/musica.html" class="card-link">
+              Esplora
+            </a>
           </article>
 
+          <!-- STUDIO -->
           <article class="card">
-            <h3>Sezione Libri</h3>
+            <h3>Studio</h3>
             <p>
-              Le mie letture
+              Appunti e riflessioni su filosofia,
+              scienza e tecnologia.
             </p>
-            <a href="#" class="card-link">Scopri di più</a>
+            <a href="studio.html" class="card-link">
+              Esplora
+            </a>
           </article>
 
-          <article class="card">
-            <h3>Sezione Studio</h3>
-            <p>
-              Le mie discipline
-            </p>
-            <a href="#" class="card-link">Scopri di più</a>
-          </article>
         </div>
       </div>
     </section>
@@ -88,27 +104,47 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contatti</h2>
+
         <p>
-          Puoi trovarmi anche sui social:
+          Puoi trovarmi anche qui:
         </p>
+
         <ul class="social-list">
-          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              X (Twitter)
+            </a>
+          </li>
         </ul>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Il mio spazio online</p>
+      <p>
+        © <span id="year"></span> Il mio spazio online
+      </p>
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
-    // Imposta automaticamente l'anno corrente nel footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+
 </body>
 </html>
