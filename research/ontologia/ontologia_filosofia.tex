@@ -1,17 +1,34 @@
 
 \documentclass[a4paper,12pt]{article}
 
-% Lingua e codifica
-\usepackage[italian]{babel}
+% Font e lingua
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
-% Impaginazione
-\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
 \usepackage{setspace}
 \usepackage{amsmath}
 \usepackage[protrusion=true,expansion=false]{microtype}
-\onehalfspacing
+
+% Impaginazione
+\usepackage[
+  a4paper,
+  left=2.5cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm
+]{geometry}
+
+% Interlinea
+\usepackage{setspace}
+\setstretch{1.3}
+
+% Paragrafi
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% Miglioramento giustificazione
+\emergencystretch=2em
 
 % Collegamenti
 \usepackage[hidelinks]{hyperref}
